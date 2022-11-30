@@ -1,0 +1,190 @@
+.contact {
+  display: flex;
+  width: 100%;
+  padding: 6rem 0;
+  background-color: #EAF2FD;
+  margin-top: 3rem;
+}
+
+.container__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ============================ */
+.contact__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact__logo--image {
+  width: 3.5rem;
+}
+
+.contact__logo--title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: .4rem;
+}
+
+/* ============================== */
+
+.contact__menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.menu__item a {
+  text-decoration: none;
+  color: #464646;
+}
+
+/* ============================== */
+
+.contact__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #464646;
+}
+
+.form__input::placeholder {
+  color: #464646;
+  font-size: 1.2rem;
+}
+
+.form__textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #464646;
+  resize: none;
+}
+
+.form__textarea::placeholder {
+  color: #464646;
+  font-size: 1.2rem;
+}
+
+.form__button {
+  width: 30%;
+  height: 5rem;
+  background-color: #2A7AE4;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .container__contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+      "logo form form"
+      "menu form form";
+  }
+
+  .contact__logo {
+    grid-area: logo;
+    justify-content: left;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  .contact__menu {
+    grid-area: menu;
+    justify-content: left;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+  }
+
+  .contact__form {
+    grid-area: form;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+  }
+
+  .contact__logo {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  /* ============================== */
+
+  .contact__menu {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4rem;
+  }
+
+  /* ============================== */
+
+  .contact__form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
